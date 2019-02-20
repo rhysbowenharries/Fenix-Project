@@ -32,6 +32,7 @@ const EditClient=(props)=>(
             <select id="title" name="title" className="form-control" defaultValue={props.client.title}>
               <option>Select...</option>
               <option value="Mr">Mr</option>
+              <option value="Mrs">Mrs</option>
               <option value="Miss">Miss</option>
               <option value="Ms">Ms</option>
               <option value="Other">Other</option>
@@ -126,15 +127,15 @@ const EditClient=(props)=>(
         </div>
         <div className="form-group">
           <div className="form-check">
-            <input type="checkbox" id="leavemessage" name="leavemessage" className="form-check-input"/>
+            <input type="checkbox" id="leavemessage" name="leavemessage" className="form-check-input" defaultValue={props.client.leavemessage}/>
             <label className="form-check-label" htmlFor="leavemessage">Tick if we can leave a message on your voicemail</label>
           </div>
           <div className="form-check">
-            <input type="checkbox" id="fromfeniks" name="fromfeniks" className="form-check-input"/>
+            <input type="checkbox" id="fromfeniks" name="fromfeniks" className="form-check-input" defaultValue={props.client.fromfeniks}/>
             <label className="form-check-label" htmlFor="fromfeniks">Tick if we can say we are calling from Feniks</label>
           </div>
           <div className="form-check">
-            <input type="checkbox" id="mailing" name="mailing" className="form-check-input"/>
+            <input type="checkbox" id="mailing" name="mailing" className="form-check-input" defaultValue={props.client.mailing}/>
             <label className="form-check-label" htmlFor="mailing">Tick if you agree to be added to our mailing list to be informed about news, services and projects</label>
           </div>
         </div>
@@ -148,29 +149,29 @@ const EditClient=(props)=>(
           <label htmlFor="projects" className="col-sm-12 col-form-label">Which Project(s) would you like to attend? Please tick all relevant boxes.</label>
         </div>
         <div className="form-group form-check form-check-inline">
-          <input type="checkbox" id="project1" name="project1" className="form-check-input"/>
+          <input type="checkbox" id="project1" name="project1" className="form-check-input"  defaultChecked={props.client.projects.active50}/>
           <label className="form-check-label" htmlFor="project1" value="1">Active 50+</label>
-          <input type="checkbox" id="project2" name="project2" className="form-check-input"/>
+          <input type="checkbox" id="project2" name="project2" className="form-check-input" defaultChecked={props.client.projects.counselling}/>
           <label className="form-check-label" htmlFor="project2" value="1">Counselling / Therapy</label>
-          <input type="checkbox" id="project3" name="project3" className="form-check-input"/>
+          <input type="checkbox" id="project3" name="project3" className="form-check-input" defaultChecked={props.client.projects.grouptherapy}/>
           <label className="form-check-label" htmlFor="project3" value="1">Group Therapy</label>
         </div>
         <br/>
         <div className="form-group form-check form-check-inline">
-          <input type="checkbox" id="project4" name="project4" className="form-check-input"/>
+          <input type="checkbox" id="project4" name="project4" className="form-check-input" defaultChecked={props.client.projects.toddler}/>
           <label className="form-check-label" htmlFor="project4" value="1">Toddler Group</label>
-          <input type="checkbox" id="project5" name="project5" className="form-check-input"/>
+          <input type="checkbox" id="project5" name="project5" className="form-check-input" defaultChecked={props.client.projects.survivors}/>
           <label className="form-check-label" htmlFor="project5" value="1">Survivors' Group</label>
-          <input type="checkbox" id="project6" name="project6" className="form-check-input"/>
+          <input type="checkbox" id="project6" name="project6" className="form-check-input" defaultChecked={props.client.projects.personaldevelopment}/>
           <label className="form-check-label" htmlFor="project6" value="1">Personal Development Workshops</label>
         </div>
         <br/>
         <div className="form-group form-check form-check-inline">
-          <input type="checkbox" id="project7" name="project7" className="form-check-input"/>
+          <input type="checkbox" id="project7" name="project7" className="form-check-input" defaultChecked={props.client.projects.leithcafe}/>
           <label className="form-check-label" htmlFor="project7" value="1">Leith Conversation Cafes</label>
-          <input type="checkbox" id="project8" name="project8" className="form-check-input"/>
+          <input type="checkbox" id="project8" name="project8" className="form-check-input" defaultChecked={props.client.projects.smart}/>
           <label className="form-check-label" htmlFor="project8" value="1">SMART Recovery</label>
-          <input type="checkbox" id="project9" name="project9" className="form-check-input"/>
+          <input type="checkbox" id="project9" name="project9" className="form-check-input" defaultChecked={props.client.projects.other}/>
           <label className="form-check-label" htmlFor="project9" value="1">Other</label>
         </div>
       </div>
