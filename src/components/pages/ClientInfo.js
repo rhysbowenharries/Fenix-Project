@@ -34,9 +34,9 @@ const ClientInfo= (props) => {
       <div className="row">
         <div className="col-sm-12">
         <p> Date of Birth: {props.client.dob} </p>
-        <p>{props.client.email} </p>
-        <p>{props.client.phone} </p>
-        <p>{props.client.address.address1} {props.client.address.address2}<br/>
+        <p>Email: {props.client.email} </p>
+        <p>Phone: {props.client.phone} </p>
+        <p>Address: <br></br>{props.client.address.address1} {props.client.address.address2}<br/>
         {props.client.address.address3}<br/>
         {props.client.address.address4} </p>
         <p> Employment: {props.client.employment} </p>
