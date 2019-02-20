@@ -62,6 +62,7 @@ const NewClient = (props)=>{
                   <option>Select...</option>
                   <option value="Mr">Mr</option>
                   <option value="Miss">Miss</option>
+                  <option value="Mrs">Mrs</option>
                   <option value="Ms">Ms</option>
                   <option value="Other">Other</option>
                 </select>
