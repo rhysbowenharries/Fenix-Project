@@ -180,7 +180,8 @@ const EditClient=(props)=>(
       <div className="content-block">
         <div className="form-group">
           <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
-          <button type="reset" className="btn btn-lg btn-block btn-danger">Reset</button>
+          <input type="reset" className="btn btn-lg btn-block btn-danger" value="Reset"/>
+          <button type="delete" className="btn btn-lg btn-block btn-danger">delete</button>
         </div>
       </div>
     </form>
