@@ -131,7 +131,7 @@ const NewClient = (props)=>{
             <div className="form-group row">
               <label htmlFor="phone" className="col-sm-2 col-form-label">Phone Number</label>
               <div className="col-sm-9">
-                <input type="text" id="phone" name="phone" className="form-control"  placeholder="Phone Number"/>
+                <input type="number" id="phone" name="phone" className="form-control"  placeholder="Phone Number"/>
               </div>
             </div>
             <div className="form-group row">
