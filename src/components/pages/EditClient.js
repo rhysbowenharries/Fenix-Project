@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-<<<<<<< HEAD
 const EditClient=(props)=>{
   function handleSubmit(event){
     event.preventDefault();
@@ -44,9 +43,6 @@ const EditClient=(props)=>{
     }
     props.handleClientPut(client);
   }
-=======
-const EditClient = (props) => {
->>>>>>> e26_develop
 
   function onDelete() {
     props.handleClientDelete(props.client.id)
@@ -66,20 +62,14 @@ const EditClient = (props) => {
         </div>
       </div>
 
-<<<<<<< HEAD
-    <form onSubmit={handleSubmit}>
-      <div className="content-block">
-        <div className="col-sm-4">
-          <h4>Edit Registration Form</h4>
-=======
-      <form>
+
+      <form onSubmit={handleSubmit}>
         <div className="content-block">
           <div className="col-sm-4">
             <h4>Edit Registration Form</h4>
           </div>
           <div className="row">
             <h4>Personal Information</h4>
->>>>>>> e26_develop
           </div>
 
 
