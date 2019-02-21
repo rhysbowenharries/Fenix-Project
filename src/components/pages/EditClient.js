@@ -2,11 +2,50 @@ import React,{Fragment} from 'react';
 import {Link} from 'react-router-dom';
 
 const EditClient=(props)=>{
+  function handleSubmit(event){
+    event.preventDefault();
+
+    // Turn address and projects into array
+    const address = {
+      "address1": event.target.address1.value,
+      "address2": event.target.address2.value,
+      "address3": event.target.address3.value,
+      "address4": event.target.address4.value
+    };
+
+    const projects = {
+      "active50":event.target.project1.checked,
+      "counselling":event.target.project2.checked,
+      "grouptherapy":event.target.project3.checked,
+      "toddler":event.target.project4.checked,
+      "survivors":event.target.project5.checked,
+      "personaldevelopment":event.target.project6.checked,
+      "leithcafe":event.target.project7.checked,
+      "smart":event.target.project8.checked,
+      "other":event.target.project9.checked
+    }
+
+    const client = {
+      "id":props.client.id,
+      "title":event.target.title.value,
+      "surname":event.target.surname.value,
+      "forename":event.target.forename.value,
+      "dob":event.target.dob.value,
+      "gp":event.target.gp.value,
+      "address":address,
+      "phone":event.target.phone.value,
+      "email":event.target.email.value,
+      "employment":event.target.employment.value,
+      "leavemessage":event.target.leavemessage.value,
+      "fromfeniks":event.target.fromfeniks.value,
+      "mailing":event.target.mailing.value,
+      "projects":projects,
+    }
+    props.handleClientPut(client);
+  }
 
   function onDelete() {
-    console.log("Waaaaaaaaaa");
     props.handleClientDelete(props.client.id)
-
   }
   return(
   <Fragment>
@@ -23,7 +62,7 @@ const EditClient=(props)=>{
       </div>
     </div>
 
-    <form>
+    <form onSubmit={handleSubmit}>
       <div className="content-block">
         <div className="col-sm-4">
           <h4>Edit Registration Form</h4>
