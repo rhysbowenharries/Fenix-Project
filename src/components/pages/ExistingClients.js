@@ -1,7 +1,7 @@
 import React,{Fragment, Component} from 'react';
 import {Link} from 'react-router-dom';
 import Request from '../../helper/Request.js'
-import {url} from '../../helper/AwsRoute.js';
+import {url} from '../../helper/awsRoute.js';
 
 import ClientList from '../bits/ClientList.js';
 

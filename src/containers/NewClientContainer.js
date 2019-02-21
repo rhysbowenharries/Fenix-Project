@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Request from '../helper/Request.js';
 import NewClient from '../components/pages/NewClient.js';
-import {url} from '../helper/AwsRoute.js';
+import {url} from '../helper/awsRoute.js';
 
 
 class NewClientContainer extends Component{

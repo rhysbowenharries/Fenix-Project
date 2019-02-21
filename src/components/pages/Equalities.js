@@ -4,6 +4,7 @@ import {Link} from 'react-router-dom';
 const Equalities =(props)=> {
   function handleSubmit(event){
     event.preventDefault();
+  
     const equalities = {
       "age":"35",
       "employment":"#",
@@ -131,6 +132,8 @@ const Equalities =(props)=> {
             </div>
           </div>
         </form>
+
+
       </Fragment>
     )
   }

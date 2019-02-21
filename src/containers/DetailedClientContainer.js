@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Request from '../helper/Request.js';
 import ClientInfo from '../components/pages/ClientInfo.js';
-import {url} from '../helper/AwsRoute.js';
+import {url} from '../helper/awsRoute.js';
 
 class DetailedClientContainer extends Component{
   constructor(props){
