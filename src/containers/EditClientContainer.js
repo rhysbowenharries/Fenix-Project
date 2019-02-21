@@ -24,7 +24,7 @@ class EditClientContainer extends Component{
     let request = new Request();
     const urldelete = "https://ibog5q1ds7.execute-api.eu-west-1.amazonaws.com/Production/clients/" + id;
     // debugger
-    request.delete(urldelete).then(() => {window.location = "https://ibog5q1ds7.execute-api.eu-west-1.amazonaws.com/Production/clients/"})
+    request.delete(urldelete).then(() => {window.location = "/clients/"})
   }
 
   render(){

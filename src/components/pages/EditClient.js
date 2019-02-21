@@ -188,11 +188,12 @@ const EditClient=(props)=>{
         <div className="form-group">
           <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
           <input type="reset" className="btn btn-lg btn-block btn-danger" value="Reset"/>
-          <button onClick={onDelete} type="delete" className="btn btn-lg btn-block btn-danger">delete</button>
         </div>
       </div>
     </form>
-
+    <div>
+    <button onClick={onDelete} type="delete" className="btn btn-lg btn-block btn-danger">delete</button>
+    </div>
   </Fragment>
 )
 }
