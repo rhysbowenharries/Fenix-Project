@@ -184,19 +184,18 @@ const EditClient = (props) => {
         </div>
 
 
-        <div className="content-block">
-          <div className="form-group">
+        <div className="edit-button-block1">
+          <div >
             <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit Changes" />
-            <input type="reset" className="btn btn-lg btn-block btn-danger" value="Undo Changes" />
+            <input type="reset" className="btn btn-lg btn-block btn-warning" value="Undo Changes" />
           </div>
         </div>
       </form>
 
-      <div>
-
+      <div className="edit-button-block2">
         <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this client?')) { onDelete(e) } }} className="btn btn-lg btn-block btn-danger">
           Delete Client
-</button>
+        </button>
       </div>
 
 

@@ -57,6 +57,25 @@ table {
   box-shadow: -5px 5px RGBA(0,0,0,0.5);
 }
 
+
+/* edit client button styling  - submit and undo are in button-block1, delete is in button-block2. Can't be in same divs as delete button cannot be within the form that submit and undo have to be in*/
+
+.edit-button-block1{
+  background: RGBA(230,230,230,0.9);
+  border-radius: 15px 15px 0 0;
+  padding: 10px 10px 10px 10px;
+  margin: 0 0 0px 0;
+  box-shadow: -5px 5px RGBA(0,0,0,0.5);
+}
+
+.edit-button-block2{
+  background: RGBA(230,230,230,0.9);
+  border-radius: 0 0 15px 15px;
+  padding: 0px 10px 10px 10px;
+  margin: 0 0 0px 0;
+  box-shadow: -5px 5px RGBA(0,0,0,0.5);
+}
+
 .gdpr{
   padding:20px 50px;
   font-size: 14px;
