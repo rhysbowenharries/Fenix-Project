@@ -58,7 +58,7 @@ const NewClient = (props)=>{
             <div className="form-group row">
               <label htmlFor="title" className="col-sm-2 col-form-label">Title</label>
               <div className="col-sm-9">
-                <select id="title" name="title" className="form-control">
+                <select id="title" name="title" className="form-control" required>
                   <option>Select...</option>
                   <option value="Mr">Mr</option>
                   <option value="Miss">Miss</option>
@@ -73,7 +73,7 @@ const NewClient = (props)=>{
               <label htmlFor="surname" className="col-sm-2 col-form-label">Surname(s)</label>
               <div className="col-sm-9">
 
-                <input type="text" id="surname" name="surname" className="form-control"  placeholder="Surname(s)" />
+                <input type="text" id="surname" name="surname" className="form-control"  placeholder="Surname(s)" required/>
               </div>
             </div>
 
@@ -81,14 +81,14 @@ const NewClient = (props)=>{
               <label htmlFor="forename" className="col-sm-2 col-form-label">Forename(s)</label>
               <div className="col-sm-9">
 
-                <input type="text" id="forename" name="forename" className="form-control"  placeholder="Forename(s)" />
+                <input type="text" id="forename" name="forename" className="form-control"  placeholder="Forename(s)" required/>
               </div>
             </div>
 
             <div className="form-group row">
               <label htmlFor="dob" className="col-sm-2 col-form-label">Date of Birth</label>
               <div className="col-sm-9">
-                <input type="date" id="dob" name="dob" className="form-control"  placeholder="" />
+                <input type="date" id="dob" name="dob" className="form-control"  placeholder="" required/>
               </div>
             </div>
 
@@ -131,7 +131,7 @@ const NewClient = (props)=>{
             <div className="form-group row">
               <label htmlFor="phone" className="col-sm-2 col-form-label">Phone Number</label>
               <div className="col-sm-9">
-                <input type="number" id="phone" name="phone" className="form-control"  placeholder="Phone Number"/>
+                <input type="number" id="phone" name="phone" className="form-control"  placeholder="Phone Number"required/>
               </div>
             </div>
             <div className="form-group row">
@@ -143,7 +143,7 @@ const NewClient = (props)=>{
             <div className="form-group row">
               <label htmlFor="employment" className="col-sm-2 col-form-label">Employment Status</label>
               <div className="col-sm-9">
-                <select id="employment" name="employment" className="form-control">
+                <select id="employment" name="employment" className="form-control" required>
                   <option>Select...</option>
                   <option value="Employed">Employed</option>
                   <option value="Self-Employed">Self-Employed</option>
