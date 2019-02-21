@@ -134,7 +134,7 @@ const EditClient = (props) => {
           </div>
           <div className="form-group">
             <div className="form-check">
-              <input type="checkbox" id="leavemessage" name="leavemessage" className="form-check-input" efaultChecked={props.client.leavemessage} />
+              <input type="checkbox" id="leavemessage" name="leavemessage" className="form-check-input" defaultChecked={props.client.leavemessage} />
               <label className="form-check-label" htmlFor="leavemessage">Tick if we can leave a message on your voicemail</label>
             </div>
             <div className="form-check">
