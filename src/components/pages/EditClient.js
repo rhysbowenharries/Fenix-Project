@@ -194,7 +194,7 @@ const EditClient = (props) => {
 
       <div>
 
-        <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this item?')) { onDelete(e) } }} className="btn btn-lg btn-block btn-danger">
+        <button onClick={(e) => { if (window.confirm('Are you sure you wish to delete this client?')) { onDelete(e) } }} className="btn btn-lg btn-block btn-danger">
           Delete Client
 </button>
       </div>
