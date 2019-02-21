@@ -7,6 +7,9 @@ class EditClientContainer extends Component{
   constructor(props){
     super(props)
     this.state = {client: null }
+
+    this.handleClientDelete = this.handleClientDelete.bind(this);
+
   }
 
   componentDidMount(){
@@ -17,11 +20,18 @@ class EditClientContainer extends Component{
 
   };
 
+  handleClientDelete(id){
+    let request = new Request();
+    const urldelete = "https://ibog5q1ds7.execute-api.eu-west-1.amazonaws.com/Production/clients/" + id;
+    // debugger
+    request.delete(urldelete).then(() => {window.location = "https://ibog5q1ds7.execute-api.eu-west-1.amazonaws.com/Production/clients/"})
+  }
+
   render(){
     if(!this.state.client){
       return null;
     }
-    return <EditClient client = {this.state.client} />
+    return <EditClient client = {this.state.client} handleClientDelete = {this.handleClientDelete}/>
   }
 
 };

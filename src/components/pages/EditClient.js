@@ -1,7 +1,14 @@
 import React,{Fragment} from 'react';
 import {Link} from 'react-router-dom';
 
-const EditClient=(props)=>(
+const EditClient=(props)=>{
+
+  function onDelete() {
+    console.log("Waaaaaaaaaa");
+    props.handleClientDelete(props.client.id)
+
+  }
+  return(
   <Fragment>
     <div className="content-block">
       <div className="row">
@@ -181,11 +188,12 @@ const EditClient=(props)=>(
         <div className="form-group">
           <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
           <input type="reset" className="btn btn-lg btn-block btn-danger" value="Reset"/>
-          <button type="delete" className="btn btn-lg btn-block btn-danger">delete</button>
+          <button onClick={onDelete} type="delete" className="btn btn-lg btn-block btn-danger">delete</button>
         </div>
       </div>
     </form>
 
   </Fragment>
 )
+}
 export default EditClient;
