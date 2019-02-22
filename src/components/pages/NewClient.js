@@ -34,9 +34,9 @@ const NewClient = (props)=>{
       "phone":event.target.phone.value,
       "email":event.target.email.value,
       "employment":event.target.employment.value,
-      "leavemessage":event.target.leavemessage.value,
-      "fromfeniks":event.target.fromfeniks.value,
-      "mailing":event.target.mailing.value,
+      "leavemessage":event.target.leavemessage.checked,
+      "fromfeniks":event.target.fromfeniks.checked,
+      "mailing":event.target.mailing.checked,
       "projects":projects,
       "hear":event.target.hear.value
     }
