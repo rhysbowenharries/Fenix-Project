@@ -6,13 +6,15 @@ const ddb = new AWS.DynamoDB.DocumentClient();
 exports.updateClient = function (event, context, callback) {
    console.log("Event", event);
    const id = event.id;
+   const address = event.address;
+   const projects = event.projects;
    const params = {
       TableName: process.env.TABLE_NAME,
       Key: {
          "id": id
       },
 
-      UpdateExpression: "set forename = :f, surname = :s, title = :t, dob = :d, gp = :g, phone = :p, email = :em, employment = :e, leavemessage = :msg, fromfeniks = :ff, mailing = :ma, forreview = :fr",
+      UpdateExpression: "set forename = :f, surname = :s, title = :t, dob = :d, gp = :g, phone = :p, email = :em, employment = :e, leavemessage = :msg, fromfeniks = :ff, mailing = :ma, forreview = :fr, address = :ad, projects = :pr",
 
       ExpressionAttributeValues: {
          ":f": event.forename,
@@ -26,7 +28,9 @@ exports.updateClient = function (event, context, callback) {
          ":msg": event.leavemessage,
          ":ff": event.fromfeniks,
          ":ma": event.mailing,
-         ":fr": event.forreview
+         ":fr": event.forreview,
+         ":ad": event.address,
+         ":pr": event.projects
       },
       ReturnValues: "UPDATED_NEW"
 
