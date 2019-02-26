@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-const EditClient=(props)=>{
-  function handleSubmit(event){
+const EditClient = (props) => {
+  function handleSubmit(event) {
     event.preventDefault();
 
     // Turn address and projects into array
@@ -14,32 +14,33 @@ const EditClient=(props)=>{
     };
 
     const projects = {
-      "active50":event.target.project1.checked,
-      "counselling":event.target.project2.checked,
-      "grouptherapy":event.target.project3.checked,
-      "toddler":event.target.project4.checked,
-      "survivors":event.target.project5.checked,
-      "personaldevelopment":event.target.project6.checked,
-      "leithcafe":event.target.project7.checked,
-      "smart":event.target.project8.checked,
-      "other":event.target.project9.checked
+      "active50": event.target.project1.checked,
+      "counselling": event.target.project2.checked,
+      "grouptherapy": event.target.project3.checked,
+      "toddler": event.target.project4.checked,
+      "survivors": event.target.project5.checked,
+      "personaldevelopment": event.target.project6.checked,
+      "leithcafe": event.target.project7.checked,
+      "smart": event.target.project8.checked,
+      "other": event.target.project9.checked
     }
 
     const client = {
-      "id":props.client.id,
-      "title":event.target.title.value,
-      "surname":event.target.surname.value,
-      "forename":event.target.forename.value,
-      "dob":event.target.dob.value,
-      "gp":event.target.gp.value,
-      "address":address,
-      "phone":event.target.phone.value,
-      "email":event.target.email.value,
-      "employment":event.target.employment.value,
-      "leavemessage":event.target.leavemessage.value,
-      "fromfeniks":event.target.fromfeniks.value,
-      "mailing":event.target.mailing.value,
-      "projects":projects,
+      "id": props.client.id,
+      "title": event.target.title.value,
+      "surname": event.target.surname.value,
+      "forename": event.target.forename.value,
+      "dob": event.target.dob.value,
+      "gp": event.target.gp.value,
+      "address": address,
+      "phone": event.target.phone.value,
+      "email": event.target.email.value,
+      "employment": event.target.employment.value,
+      "leavemessage": event.target.leavemessage.checked,
+      "fromfeniks": event.target.fromfeniks.checked,
+      "mailing": event.target.mailing.checked,
+      "projects": projects,
+      "forreview": event.target.forreview.value
     }
     props.handleClientPut(client);
   }
@@ -220,6 +221,15 @@ const EditClient=(props)=>{
             <label className="form-check-label" htmlFor="project8" value="1">SMART Recovery</label>
             <input type="checkbox" id="project9" name="project9" className="form-check-input" defaultChecked={props.client.projects.other} />
             <label className="form-check-label" htmlFor="project9" value="1">Other</label>
+          </div>
+        </div>
+
+        <div className="content-block">
+          <div className="form-group row">
+            <label htmlFor="forreview" className="col-sm-2 col-form-label">Items for Review</label>
+            <div className="col-sm-9">
+              <input type="text" id="forreview" name="forreview" className="form-control" defaultValue={props.client.forreview} />
+            </div>
           </div>
         </div>
 

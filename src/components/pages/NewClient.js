@@ -38,7 +38,8 @@ const NewClient = (props)=>{
       "fromfeniks":event.target.fromfeniks.value,
       "mailing":event.target.mailing.value,
       "projects":projects,
-      "hear":event.target.hear.value
+      "hear":event.target.hear.value,
+      "forreview": event.target.forreview.value
     }
     props.handleClientPost(client);
   }
@@ -231,11 +232,20 @@ const NewClient = (props)=>{
             </div>
           </div>
 
+          <div className="content-block">
+          <div className="form-group row">
+            <label htmlFor="forreview" className="col-sm-2 col-form-label">Items for Review</label>
+            <div className="col-sm-9">
+              <input type="text" id="forreview" name="forreview" className="form-control" placeholder="If any item on this client needs reviewed, please advise here" />
+            </div>
+          </div>
+        </div>
 
+      
           <div className="content-block">
             <div className="form-group">
-              <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
-              <input type="reset" className="btn btn-lg btn-block btn-danger" value="Reset"/>
+              <input type="submit" className="btn btn-lg btn-block btn-success" value="Save New Client"/>
+              <input type="reset" className="btn btn-lg btn-block btn-danger" value="Undo Changes"/>
             </div>
           </div>
         </form>
