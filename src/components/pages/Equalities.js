@@ -9,8 +9,6 @@ const Equalities =(props)=> {
       "age":"35",
       "employment":"#",
       "hear":"35",
-      "gender":event.target.gender.value,
-      "nationality":event.target.nationality.value,
       "orientation":event.target.orientation.value,
       "disability":event.target.disability.value,
       "abroad":event.target.abroad.value
@@ -50,34 +48,9 @@ const Equalities =(props)=> {
             <div className="form-group row">
               <label htmlFor="gender" className="col-sm-12 col-form-label">Gender</label>
             </div>
-            <div className="form-group form-check form-check-inline">
-              <input type="radio" id="gender1" name="gender" className="form-check-input" value="1"/>
-              <label className="form-check-label" htmlFor="gender1">Female</label>
-              <input type="radio" id="gender2" name="gender" className="form-check-input" value="2"/>
-              <label className="form-check-label" htmlFor="gender2">Male</label>
-              <input type="radio" id="gender3" name="gender" className="form-check-input" value="3"/>
-              <label className="form-check-label" htmlFor="gender3">Other</label>
-              <input type="radio" id="gender4" name="gender" className="form-check-input" value="0"/>
-              <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
-            </div>
+           
             <hr/>
-            <div className="form-group row">
-              <label htmlFor="nationality" className="col-sm-2 col-form-label">Nationality</label>
-              <div className="col-sm-9">
-                <select id="nationality" name="nationality" className="form-control">
-                  <option>Select...</option>
-                  <option value="1">Česká republika / Czech Republic</option>
-                  <option value="2">Eesti / Estonia</option>
-                  <option value="3">Magyarország / Hungary</option>
-                  <option value="4">Latvija / Latvia</option>
-                  <option value="5">Lietuva / Lithuania</option>
-                  <option value="6">Polska / Poland</option>
-                  <option value="7">Slovensko / Slovakia</option>
-                  <option value="8">Slovenija / Slovenia</option>
-                  <option value="0">Other</option>
-                </select>
-              </div>
-            </div>
+            
             <hr/>
             <div className="form-group row">
               <label htmlFor="orientation" className="col-sm-12 col-form-label">Please select the option which best describes your sexual orientation</label>

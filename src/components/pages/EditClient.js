@@ -31,6 +31,8 @@ const EditClient = (props) => {
       "surname": event.target.surname.value,
       "forename": event.target.forename.value,
       "dob": event.target.dob.value,
+      "gender": event.target.gender.value,
+      "nationality": event.target.nationality.value,
       "gp": event.target.gp.value,
       "address": address,
       "phone": event.target.phone.value,
@@ -110,6 +112,38 @@ const EditClient = (props) => {
               <input type="date" id="dob" name="dob" className="form-control" placeholder="" defaultValue={props.client.dob} />
             </div>
           </div>
+
+
+          <div className="form-group form-check form-check-inline">
+            <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
+            <br></br>
+              <input type="radio" id="gender1" name="gender" className="form-check-input" value="female" defaultChecked={props.client.gender}/>
+              <label className="form-check-label" htmlFor="gender1">Female</label>
+              <input type="radio" id="gender2" name="gender" className="form-check-input" value="male" defaultChecked={props.client.gender2} />
+              <label className="form-check-label" htmlFor="gender2">Male</label>
+              <input type="radio" id="gender3" name="gender" className="form-check-input" value="other" defaultChecked={props.client.gender3} />
+              <label className="form-check-label" htmlFor="gender3">Other</label>
+              <input type="radio" id="gender4" name="gender" className="form-check-input" value="nodisclose" defaultChecked={props.client.gender4} />
+              <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
+            </div>
+
+          <div className="form-group row">
+              <label htmlFor="nationality" className="col-sm-2 col-form-label">Nationality</label>
+              <div className="col-sm-9">
+                <select id="nationality" name="nationality" className="form-control" defaultValue={props.client.nationality}>
+                  <option>Select...</option>
+                  <option value="Česká republika / Czech Republic">Česká republika / Czech Republic</option>
+                  <option value="Eesti / Estonia">Eesti / Estonia</option>
+                  <option value="Magyarország / Hungary">Magyarország / Hungary</option>
+                  <option value="Latvija / Latvia">Latvija / Latvia</option>
+                  <option value="Lietuva / Lithuania">Lietuva / Lithuania</option>
+                  <option value="Polska / Poland">Polska / Poland</option>
+                  <option value="Slovensko / Slovakia">Slovensko / Slovakia</option>
+                  <option value="Slovenija / Slovenia">Slovenija / Slovenia</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
 
           <div className="form-group row">
             <label htmlFor="gp" className="col-sm-2 col-form-label">GP Name and Practice</label>
