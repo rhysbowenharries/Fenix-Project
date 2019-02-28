@@ -29,6 +29,8 @@ const NewClient = (props)=>{
       "surname":event.target.surname.value,
       "forename":event.target.forename.value,
       "dob":event.target.dob.value,
+      "gender":event.target.gender.value,
+      "nationality":event.target.nationality.value,
       "gp":event.target.gp.value,
       "address":address,
       "phone":event.target.phone.value,
@@ -38,7 +40,8 @@ const NewClient = (props)=>{
       "fromfeniks":event.target.fromfeniks.checked,
       "mailing":event.target.mailing.checked,
       "projects":projects,
-      "hear":event.target.hear.value
+      "hear":event.target.hear.value,
+      "forreview": event.target.forreview.value
     }
     props.handleClientPost(client);
   }
@@ -89,6 +92,37 @@ const NewClient = (props)=>{
               <label htmlFor="dob" className="col-sm-2 col-form-label">Date of Birth</label>
               <div className="col-sm-9">
                 <input type="date" id="dob" name="dob" className="form-control"  placeholder="" required/>
+              </div>
+            </div>
+
+            <div className="form-group form-check form-check-inline">
+            <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
+            <br></br>
+              <input type="radio" id="gender1" name="gender" className="form-check-input" value="Female"/>
+              <label className="form-check-label" htmlFor="gender1">Female</label>
+              <input type="radio" id="gender2" name="gender" className="form-check-input" value="Male"/>
+              <label className="form-check-label" htmlFor="gender2">Male</label>
+              <input type="radio" id="gender3" name="gender" className="form-check-input" value="Other"/>
+              <label className="form-check-label" htmlFor="gender3">Other</label>
+              <input type="radio" id="gender4" name="gender" className="form-check-input" value="I do not wish to disclose this"/>
+              <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
+            </div>
+
+            <div className="form-group row">
+              <label htmlFor="nationality" className="col-sm-2 col-form-label">Nationality</label>
+              <div className="col-sm-9">
+                <select id="nationality" name="nationality" className="form-control">
+                  <option>Select...</option>
+                  <option value="Česká republika / Czech Republic">Česká republika / Czech Republic</option>
+                  <option value="Eesti / Estonia">Eesti / Estonia</option>
+                  <option value="Magyarország / Hungary">Magyarország / Hungary</option>
+                  <option value="Latvija / Latvia">Latvija / Latvia</option>
+                  <option value="Lietuva / Lithuania">Lietuva / Lithuania</option>
+                  <option value="Polska / Poland">Polska / Poland</option>
+                  <option value="Slovensko / Slovakia">Slovensko / Slovakia</option>
+                  <option value="Slovenija / Slovenia">Slovenija / Slovenia</option>
+                  <option value="Other">Other</option>
+                </select>
               </div>
             </div>
 
@@ -231,11 +265,20 @@ const NewClient = (props)=>{
             </div>
           </div>
 
+          <div className="content-block">
+          <div className="form-group row">
+            <label htmlFor="forreview" className="col-sm-2 col-form-label">Items for Review</label>
+            <div className="col-sm-9">
+              <input type="text" id="forreview" name="forreview" className="form-control" placeholder="If any item on this client needs reviewed, please advise here" defaultValue = "If any item on this client needs reviewed, please advise here" />
+            </div>
+          </div>
+        </div>
+
 
           <div className="content-block">
             <div className="form-group">
-              <input type="submit" className="btn btn-lg btn-block btn-success" value="Submit"/>
-              <input type="reset" className="btn btn-lg btn-block btn-danger" value="Reset"/>
+              <input type="submit" className="btn btn-lg btn-block btn-success" value="Save New Client"/>
+              <input type="reset" className="btn btn-lg btn-block btn-danger" value="Undo Changes"/>
             </div>
           </div>
         </form>

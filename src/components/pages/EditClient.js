@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 
-const EditClient=(props)=>{
-  function handleSubmit(event){
+const EditClient = (props) => {
+  function handleSubmit(event) {
     event.preventDefault();
 
     // Turn address and projects into array
@@ -14,32 +14,35 @@ const EditClient=(props)=>{
     };
 
     const projects = {
-      "active50":event.target.project1.checked,
-      "counselling":event.target.project2.checked,
-      "grouptherapy":event.target.project3.checked,
-      "toddler":event.target.project4.checked,
-      "survivors":event.target.project5.checked,
-      "personaldevelopment":event.target.project6.checked,
-      "leithcafe":event.target.project7.checked,
-      "smart":event.target.project8.checked,
-      "other":event.target.project9.checked
+      "active50": event.target.project1.checked,
+      "counselling": event.target.project2.checked,
+      "grouptherapy": event.target.project3.checked,
+      "toddler": event.target.project4.checked,
+      "survivors": event.target.project5.checked,
+      "personaldevelopment": event.target.project6.checked,
+      "leithcafe": event.target.project7.checked,
+      "smart": event.target.project8.checked,
+      "other": event.target.project9.checked
     }
 
     const client = {
-      "id":props.client.id,
-      "title":event.target.title.value,
-      "surname":event.target.surname.value,
-      "forename":event.target.forename.value,
-      "dob":event.target.dob.value,
-      "gp":event.target.gp.value,
-      "address":address,
-      "phone":event.target.phone.value,
-      "email":event.target.email.value,
-      "employment":event.target.employment.value,
-      "leavemessage":event.target.leavemessage.value,
-      "fromfeniks":event.target.fromfeniks.value,
-      "mailing":event.target.mailing.value,
-      "projects":projects,
+      "id": props.client.id,
+      "title": event.target.title.value,
+      "surname": event.target.surname.value,
+      "forename": event.target.forename.value,
+      "dob": event.target.dob.value,
+      "gender": event.target.gender.value,
+      "nationality": event.target.nationality.value,
+      "gp": event.target.gp.value,
+      "address": address,
+      "phone": event.target.phone.value,
+      "email": event.target.email.value,
+      "employment": event.target.employment.value,
+      "leavemessage": event.target.leavemessage.checked,
+      "fromfeniks": event.target.fromfeniks.checked,
+      "mailing": event.target.mailing.checked,
+      "projects": projects,
+      "forreview": event.target.forreview.value
     }
     props.handleClientPut(client);
   }
@@ -109,6 +112,38 @@ const EditClient=(props)=>{
               <input type="date" id="dob" name="dob" className="form-control" placeholder="" defaultValue={props.client.dob} />
             </div>
           </div>
+
+
+          <div className="form-group form-check form-check-inline">
+            <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
+            <br></br>
+              <input type="radio" id="gender1" name="gender" className="form-check-input" value="female" defaultChecked={props.client.gender}/>
+              <label className="form-check-label" htmlFor="gender1">Female</label>
+              <input type="radio" id="gender2" name="gender" className="form-check-input" value="male" defaultChecked={props.client.gender2} />
+              <label className="form-check-label" htmlFor="gender2">Male</label>
+              <input type="radio" id="gender3" name="gender" className="form-check-input" value="other" defaultChecked={props.client.gender3} />
+              <label className="form-check-label" htmlFor="gender3">Other</label>
+              <input type="radio" id="gender4" name="gender" className="form-check-input" value="nodisclose" defaultChecked={props.client.gender4} />
+              <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
+            </div>
+
+          <div className="form-group row">
+              <label htmlFor="nationality" className="col-sm-2 col-form-label">Nationality</label>
+              <div className="col-sm-9">
+                <select id="nationality" name="nationality" className="form-control" defaultValue={props.client.nationality}>
+                  <option>Select...</option>
+                  <option value="Česká republika / Czech Republic">Česká republika / Czech Republic</option>
+                  <option value="Eesti / Estonia">Eesti / Estonia</option>
+                  <option value="Magyarország / Hungary">Magyarország / Hungary</option>
+                  <option value="Latvija / Latvia">Latvija / Latvia</option>
+                  <option value="Lietuva / Lithuania">Lietuva / Lithuania</option>
+                  <option value="Polska / Poland">Polska / Poland</option>
+                  <option value="Slovensko / Slovakia">Slovensko / Slovakia</option>
+                  <option value="Slovenija / Slovenia">Slovenija / Slovenia</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+            </div>
 
           <div className="form-group row">
             <label htmlFor="gp" className="col-sm-2 col-form-label">GP Name and Practice</label>
@@ -220,6 +255,15 @@ const EditClient=(props)=>{
             <label className="form-check-label" htmlFor="project8" value="1">SMART Recovery</label>
             <input type="checkbox" id="project9" name="project9" className="form-check-input" defaultChecked={props.client.projects.other} />
             <label className="form-check-label" htmlFor="project9" value="1">Other</label>
+          </div>
+        </div>
+
+        <div className="content-block">
+          <div className="form-group row">
+            <label htmlFor="forreview" className="col-sm-2 col-form-label">Items for Review</label>
+            <div className="col-sm-9">
+              <input type="text" id="forreview" name="forreview" className="form-control" defaultValue={props.client.forreview} />
+            </div>
           </div>
         </div>
 

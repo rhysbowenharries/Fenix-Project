@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import Request from '../helper/Request.js';
 import EditClient from '../components/pages/EditClient.js';
-import {url} from '../helper/awsRoute.js';
+import {url} from '../helper/AwsRoute.js';
 
 class EditClientContainer extends Component{
   constructor(props){
