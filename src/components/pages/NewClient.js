@@ -269,12 +269,12 @@ const NewClient = (props)=>{
           <div className="form-group row">
             <label htmlFor="forreview" className="col-sm-2 col-form-label">Items for Review</label>
             <div className="col-sm-9">
-              <input type="text" id="forreview" name="forreview" className="form-control" placeholder="If any item on this client needs reviewed, please advise here" />
+              <input type="text" id="forreview" name="forreview" className="form-control" placeholder="If any item on this client needs reviewed, please advise here" defaultValue = "If any item on this client needs reviewed, please advise here" />
             </div>
           </div>
         </div>
 
-      
+
           <div className="content-block">
             <div className="form-group">
               <input type="submit" className="btn btn-lg btn-block btn-success" value="Save New Client"/>
