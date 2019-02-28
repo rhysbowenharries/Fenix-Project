@@ -13,8 +13,9 @@ const CustomerSearchForm = (props) => {
   return(
     <form >
       <input type="text" name="surname" placeholder = " search by Surname" onChange = {handleChange}/>
-      {/* <input type = "submit" value = "Filter"/> */}
     </form>
   )
 }
 export default CustomerSearchForm;
+
+
