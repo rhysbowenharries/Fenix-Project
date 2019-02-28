@@ -39,7 +39,10 @@ const ClientInfo= (props) => {
         <p>Address: <br></br>{props.client.address.address1} {props.client.address.address2}<br/>
         {props.client.address.address3}<br/>
         {props.client.address.address4} </p>
+        <p>Gender: {props.client.gender}</p>
+        <p>Nationality: {props.client.nationality}</p>
         <p> Employment: {props.client.employment} </p>
+        <p>Notes for Review: {props.client.forreview}</p>
 
         </div>
       </div>

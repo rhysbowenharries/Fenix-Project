@@ -114,7 +114,7 @@ const EditClient = (props) => {
           </div>
 
 
-          <div className="form-group form-check form-check-inline">
+          {/* <div className="form-group form-check form-check-inline">
             <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
             <br></br>
               <input type="radio" id="gender1" name="gender" className="form-check-input" value="female" defaultChecked={props.client.gender}/>
@@ -125,6 +125,19 @@ const EditClient = (props) => {
               <label className="form-check-label" htmlFor="gender3">Other</label>
               <input type="radio" id="gender4" name="gender" className="form-check-input" value="nodisclose" defaultChecked={props.client.gender4} />
               <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
+            </div> */}
+
+            <div className="form-group row">
+              <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
+              <div className="col-sm-9">
+                <select id="gender" name="gender" className="form-control" defaultValue={props.client.gender}>
+                  <option>Select...</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                  <option value="nodiscolose">I do not wish to disclose this</option>
+                </select>
+              </div>
             </div>
 
           <div className="form-group row">

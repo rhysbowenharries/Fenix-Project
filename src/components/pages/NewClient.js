@@ -95,7 +95,7 @@ const NewClient = (props)=>{
               </div>
             </div>
 
-            <div className="form-group form-check form-check-inline">
+            {/* <div className="form-group form-check form-check-inline">
             <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
             <br></br>
               <input type="radio" id="gender1" name="gender" className="form-check-input" value="Female"/>
@@ -106,6 +106,19 @@ const NewClient = (props)=>{
               <label className="form-check-label" htmlFor="gender3">Other</label>
               <input type="radio" id="gender4" name="gender" className="form-check-input" value="I do not wish to disclose this"/>
               <label className="form-check-label" htmlFor="gender4">I do not wish to disclose this</label>
+            </div> */}
+
+            <div className="form-group row">
+              <label htmlFor="gender" className="col-sm-2 col-form-label">Gender</label>
+              <div className="col-sm-9">
+                <select id="gender" name="gender" className="form-control" required>
+                  <option>Select...</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="other">Other</option>
+                  <option value="nodiscolose">I do not wish to disclose this</option>
+                </select>
+              </div>
             </div>
 
             <div className="form-group row">
@@ -174,6 +187,7 @@ const NewClient = (props)=>{
                 <input type="text" id="email" name="email" className="form-control"  placeholder="Email Address"/>
               </div>
             </div>
+
             <div className="form-group row">
               <label htmlFor="employment" className="col-sm-2 col-form-label">Employment Status</label>
               <div className="col-sm-9">
@@ -188,15 +202,18 @@ const NewClient = (props)=>{
                 </select>
               </div>
             </div>
+
             <div className="form-group">
               <div className="form-check">
                 <input type="checkbox" id="leavemessage" name="leavemessage" className="form-check-input"/>
                 <label className="form-check-label" htmlFor="leavemessage">Tick if we can leave a message on your voicemail</label>
               </div>
+
               <div className="form-check">
                 <input type="checkbox" id="fromfeniks" name="fromfeniks" className="form-check-input"/>
                 <label className="form-check-label" htmlFor="fromfeniks">Tick if we can say we are calling from Feniks</label>
               </div>
+
               <div className="form-check">
                 <input type="checkbox" id="mailing" name="mailing" className="form-check-input"/>
                 <label className="form-check-label" htmlFor="mailing">Tick if you agree to be added to our mailing list to be informed about news, services and projects</label>
