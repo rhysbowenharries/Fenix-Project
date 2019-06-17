@@ -1,3 +1,17 @@
+# NOTE TO CX TEAM:
+
+You'll need to liaison with the partner. They need to create their own github account and take over this repo (mirror it). Process described below will not only move master code, but also all branches and history.
+
+```
+git clone --mirror <url_of_old_repo>
+cd <name_of_old_repo>
+git remote add new-origin <url_of_new_repo>
+git push new-origin --mirror
+```
+Once this is done, you can delete this note.
+-- end of note
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts (See below for deploying app to AWS S3)
